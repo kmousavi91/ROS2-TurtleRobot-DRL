@@ -13,6 +13,7 @@ The entire environment is **containerized with Docker** and uses **X11 forwardin
 ## 🧠 System Architecture Overview
 
 This project implements the core **Agent–Environment loop** for Reinforcement Learning within the ROS 2 framework:
+This loop describes how the DRL agent interacts with the simulated world in real time. In this project, the Trainer Node acts as the crucial interface, receiving the robot's state (LiDAR readings, Odometry) from the Gazebo environment and translating the agent's action (velocity commands) back into the simulation.
 
 <p align="center">
   <img src="licensed-image.jpeg" alt="Reinforcement Learning Feedback Loop" width="600"/>
