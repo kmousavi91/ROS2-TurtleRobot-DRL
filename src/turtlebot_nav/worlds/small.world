@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="small_arena">
+
+    <physics type="ode">
+      <max_step_size>0.002</max_step_size>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Arena walls -->
+    <model name="fence_left">
+      <static>true</static>
+      <pose>0 3 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.1 6.0 1.0</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.1 6.0 1.0</size></box></geometry>
+        </visual>
+      </link>
+    </model>
+
+    <model name="fence_right">
+      <static>true</static>
+      <pose>6 3 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.1 6.0 1.0</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.1 6.0 1.0</size></box></geometry>
+        </visual>
+      </link>
+    </model>
+
+    <model name="fence_bottom">
+      <static>true</static>
+      <pose>3 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>6.0 0.1 1.0</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>6.0 0.1 1.0</size></box></geometry>
+        </visual>
+      </link>
+    </model>
+
+    <model name="fence_top">
+      <static>true</static>
+      <pose>3 6 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>6.0 0.1 1.0</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>6.0 0.1 1.0</size></box></geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Obstacles -->
+    <model name="box_1">
+      <static>true</static>
+      <pose>2.0 1.8 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.6 1.2 1.0</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.6 1.2 1.0</size></box></geometry>
+        </visual>
+      </link>
+    </model>
+
+    <model name="box_2">
+      <static>true</static>
+      <pose>4.0 3.2 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>1.0 0.6 1.0</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>1.0 0.6 1.0</size></box></geometry>
+        </visual>
+      </link>
+    </model>
+
+    <model name="box_3">
+      <static>true</static>
+      <pose>3.0 4.6 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.8 0.8 1.0</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.8 0.8 1.0</size></box></geometry>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
+
